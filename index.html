@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lucide-static@latest/font/lucide.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons@3.3.1/css/uicons.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main-container">
+      <nav>
+        <ul class="nav-left">
+          <li class="fb-logo"><i class="fa-brands fa-facebook"></i></li>
+          <li class="Search">
+            <label for="search" class="search">
+              <i class="fa-solid fa-magnifying-glass"></i
+              ><input type="text" placeholder=" Search Facebook" id="search"
+            /></label>
+          </li>
+        </ul>
+        <ul class="nav-center icons">
+          <abbr title="Home" class="Home"
+            ><li>
+              <a href="#"
+                ><i
+                  class="fa-solid fa-house"
+                  style="color: #1877f2; font-size: 24px"
+                ></i>
+              </a></li
+          ></abbr>
+          <abbr title="Friend"
+            ><li class="freands">
+              <a href=""><div class="icon-users"></div> </a></li
+          ></abbr>
+          <abbr title="Watch">
+            <li class="watch">
+              <a href=""><div class="icon-tv-minimal-play"></div> </a></li
+          ></abbr>
+          <abbr title="Marketplace"
+            ><li>
+              <a href=""><div class="icon-store"></div> </a></li
+          ></abbr>
+          <abbr title="Group">
+            <li>
+              <a href=""
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  version="1.1"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="25"
+                  height="25"
+                  x="0"
+                  y="0"
+                  viewBox="0 0 496 496"
+                  style="
+                    enable-background: new 0 0 512 512;
+                    border: 2px solid #757575;
+                    border-radius: 50%;
+                  "
+                  xml:space="preserve"
+                  class=""
+                >
+                  <g
+                    transform="matrix(-1.5000000000000009,0,0,1.5000000000000009,620.0000000000001,66.99999999999989)"
+                  >
+                    <path
+                      d="M98.113 168.125c-31.73 0-57.543-25.578-57.543-57.008 0-31.433 25.813-57.012 57.543-57.012 31.727 0 57.535 25.575 57.535 57.012 0 31.434-25.808 57.008-57.535 57.008zm0-98.02c-22.91 0-41.543 18.399-41.543 41.012 0 22.61 18.633 41.008 41.543 41.008 22.903 0 41.535-18.398 41.535-41.008 0-22.613-18.632-41.012-41.535-41.012zM121.262 325.969H20.91C9.38 325.969 0 316.649 0 305.19v-26.168c0-53.57 44.012-97.156 98.113-97.156 21.278 0 41.532 6.64 58.555 19.2a8.004 8.004 0 0 1 1.687 11.19 8.006 8.006 0 0 1-11.187 1.688c-14.254-10.515-31.215-16.078-49.055-16.078-45.277 0-82.113 36.41-82.113 81.156v26.168c0 2.633 2.203 4.778 4.91 4.778h100.356c4.414 0 8 3.582 8 8 0 4.414-3.586 8-8.004 8zM475.09 319.914H374.738c-4.414 0-8-3.582-8-8 0-4.414 3.586-8 8-8h100.356c2.707 0 4.91-2.14 4.91-4.773v-26.168c0-44.754-36.836-81.157-82.113-81.157-18.91 0-37.371 6.512-51.985 18.34-3.43 2.778-8.465 2.25-11.25-1.183-2.777-3.434-2.254-8.473 1.188-11.254 17.449-14.121 39.484-21.903 62.047-21.903 54.097 0 98.109 43.582 98.109 97.157v26.168c0 11.453-9.379 20.773-20.91 20.773zM397.887 164.172c-31.727 0-57.535-25.574-57.535-57.008s25.808-57.012 57.535-57.012c31.73 0 57.543 25.575 57.543 57.012s-25.817 57.008-57.543 57.008zm0-98.02c-22.903 0-41.535 18.399-41.535 41.012s18.632 41.008 41.535 41.008c22.91 0 41.543-18.395 41.543-41.008 0-22.613-18.637-41.012-41.543-41.012zm0 0"
+                      fill="#757575"
+                      opacity="1"
+                      data-original="#000000"
+                      stroke-width="10"
+                      stroke="#757575"
+                      class=""
+                    ></path>
+                    <path
+                      d="M356.578 352H139.422c-14.426 0-26.16-11.648-26.16-25.969v-36.804c0-73.555 60.437-133.395 134.738-133.395s134.738 59.84 134.738 133.395v36.804c0 14.32-11.734 25.969-26.16 25.969zM248 171.836c-65.473 0-118.738 52.664-118.738 117.394v36.805c0 5.496 4.558 9.969 10.16 9.969h217.152c5.602 0 10.16-4.473 10.16-9.969V289.23c.004-64.73-53.261-117.394-118.734-117.394zM245.219 146.484c-40.766 0-73.938-32.855-73.938-73.246C171.281 32.852 204.45 0 245.22 0c40.773 0 73.941 32.855 73.941 73.242 0 40.39-33.172 73.242-73.941 73.242zm0-130.484c-31.946 0-57.938 25.68-57.938 57.242 0 31.567 25.992 57.246 57.938 57.246 31.949 0 57.941-25.68 57.941-57.246C303.16 41.68 277.168 16 245.22 16zm0 0"
+                      fill="#757575"
+                      opacity="1"
+                      data-original="#000000"
+                      stroke-width="10"
+                      stroke="#757575"
+                      class=""
+                    ></path>
+                  </g>
+                </svg>
+              </a></li
+          ></abbr>
+        </ul>
+        <ul class="nav-right">
+          <li>
+            <abbr title="Mamu">
+              <a href=""><div class="icon-grip"></div> </a>
+            </abbr>
+          </li>
+          <li>
+            <abbr title="Messenger"
+              ><a href="">
+                <div class="fa-brands fa-facebook-messenger"></div></a
+            ></abbr>
+          </li>
+          <li>
+            <a href=""
+              ><abbr title="Notifications"
+                ><div class="fa-solid fa-bell"></div></abbr
+            ></a>
+          </li>
+          <li>
+            <a href=""
+              ><abbr title="Account Settings"
+                ><img src="./profile-img.jpg" alt="profile img" /> </abbr
+            ></a>
+          </li>
+        </ul>
+      </nav>
+      <main>
+        <div class="main-left">
+          <section class="links-section">
+            <a href=""
+              ><div class="Profile">
+                <img src="./profile-img.jpg" alt="" />Bilal Attari
+              </div></a
+            >
+            <a href=""
+              ><div>
+                <img
+                  draggable="false"
+                  height="36"
+                  width="36"
+                  class="xz74otr"
+                  alt=""
+                  referrerpolicy="origin-when-cross-origin"
+                  src="https://static.xx.fbcdn.net/rsrc.php/v4/yt/r/rJ9k6SVFtYN.png"
+                />Meta AI
+              </div>
+            </a>
+            <a href=""
+              ><div>
+                <i
+                  data-visualcompletion="css-img"
+                  class=""
+                  style="
+                    background-image: url('https://static.xx.fbcdn.net/rsrc.php/v4/yh/r/FlnJwE1zAUa.png');
+                    background-position: 0 -777px;
+                    background-size: auto;
+                    width: 36px;
+                    height: 36px;
+                    background-repeat: no-repeat;
+                    display: inline-block;
+                  "
+                ></i
+                >Friends
+              </div>
+            </a>
+            <a href=""
+              ><div>
+                <i
+                  data-visualcompletion="css-img"
+                  class=""
+                  style="
+                    background-image: url('https://static.xx.fbcdn.net/rsrc.php/v4/yh/r/FlnJwE1zAUa.png');
+                    background-position: 0 -1184px;
+                    background-size: auto;
+                    width: 36px;
+                    height: 36px;
+                    background-repeat: no-repeat;
+                    display: inline-block;
+                  "
+                >
+                </i
+                >Memories
+              </div>
+            </a>
+            <a href="">
+              <div>
+                <i
+                  data-visualcompletion="css-img"
+                  class=""
+                  style="
+                    background-image: url('https://static.xx.fbcdn.net/rsrc.php/v4/yh/r/FlnJwE1zAUa.png');
+                    background-position: 0 -481px;
+                    background-size: auto;
+                    width: 36px;
+                    height: 36px;
+                    background-repeat: no-repeat;
+                    display: inline-block;
+                  "
+                ></i
+                >Saved
+              </div>
+            </a>
+            <a href="">
+              <div>
+                <i
+                  data-visualcompletion="css-img"
+                  class=""
+                  style="
+                    background-image: url('https://static.xx.fbcdn.net/rsrc.php/v4/yh/r/FlnJwE1zAUa.png');
+                    background-position: 0 -185px;
+                    background-size: auto;
+                    width: 36px;
+                    height: 36px;
+                    background-repeat: no-repeat;
+                    display: inline-block;
+                  "
+                ></i
+                >Group
+              </div>
+            </a>
+            <a href="">
+              <div>
+                <i
+                  data-visualcompletion="css-img"
+                  class=""
+                  style="
+                    background-image: url('https://static.xx.fbcdn.net/rsrc.php/v4/yh/r/FlnJwE1zAUa.png');
+                    background-position: 0 -1628px;
+                    background-size: auto;
+                    width: 36px;
+                    height: 36px;
+                    background-repeat: no-repeat;
+                    display: inline-block;
+                  "
+                ></i
+                >Video
+              </div>
+            </a>
+            <a href="">
+              <div>
+                <i
+                  data-visualcompletion="css-img"
+                  class=""
+                  style="
+                    background-image: url('https://static.xx.fbcdn.net/rsrc.php/v4/yh/r/FlnJwE1zAUa.png');
+                    background-position: 0 -925px;
+                    background-size: auto;
+                    width: 36px;
+                    height: 36px;
+                    background-repeat: no-repeat;
+                    display: inline-block;
+                  "
+                ></i
+                >Market Place
+              </div>
+            </a>
+            <a href="">
+              <div>
+                <img
+                  draggable="false"
+                  height="36"
+                  width="36"
+                  class="xz74otr"
+                  alt=""
+                  referrerpolicy="origin-when-cross-origin"
+                  src="https://static.xx.fbcdn.net/rsrc.php/v4/yb/r/eECk3ceTaHJ.png"
+                />Feeds
+              </div>
+            </a>
+            <a href="">
+              <div>
+                <i
+                  data-visualcompletion="css-img"
+                  class=""
+                  style="
+                    background-image: url('https://static.xx.fbcdn.net/rsrc.php/v4/yh/r/FlnJwE1zAUa.png');
+                    background-position: 0px -370px;
+                    background-size: auto;
+                    width: 36px;
+                    height: 36px;
+                    background-repeat: no-repeat;
+                    display: inline-block;
+                  "
+                ></i
+                >Ads Manager
+              </div>
+            </a>
+            <a href="">
+              <div>
+                <i
+                  data-visualcompletion="css-img"
+                  class=""
+                  style="
+                    background-image: url('https://static.xx.fbcdn.net/rsrc.php/v4/yq/r/MKwrVp_7k1D.png');
+                    background-position: 0px 0px;
+                    background-size: auto;
+                    width: 36px;
+                    height: 36px;
+                    background-repeat: no-repeat;
+                    display: inline-block;
+                  "
+                ></i
+                >Birthdays
+              </div>
+            </a>
+            <a href="">
+              <div>
+                <img
+                  draggable="false"
+                  height="36"
+                  width="36"
+                  class="xz74otr"
+                  alt=""
+                  referrerpolicy="origin-when-cross-origin"
+                  src="https://static.xx.fbcdn.net/rsrc.php/v4/yu/r/PbIrRdI6eiL.png"
+                />Chat with AIs
+              </div></a
+            >
+            <a href="">
+              <div>
+                <i
+                  data-visualcompletion="css-img"
+                  class=""
+                  style="
+                    background-image: url('https://static.xx.fbcdn.net/rsrc.php/v4/yh/r/FlnJwE1zAUa.png');
+                    background-position: 0px -629px;
+                    background-size: auto;
+                    width: 36px;
+                    height: 36px;
+                    background-repeat: no-repeat;
+                    display: inline-block;
+                  "
+                ></i
+                >Events
+              </div>
+            </a>
+            <a href="">
+              <div>
+                <img
+                  draggable="false"
+                  height="36"
+                  width="36"
+                  class="xz74otr"
+                  alt=""
+                  referrerpolicy="origin-when-cross-origin"
+                  src="https://static.xx.fbcdn.net/rsrc.php/v4/yJ/r/fGWbDwbx9W4.png"
+                />Gaming Videos
+              </div>
+            </a>
+            <a href="">
+              <div>
+                <i
+                  data-visualcompletion="css-img"
+                  class=""
+                  style="
+                    background-image: url('https://static.xx.fbcdn.net/rsrc.php/v4/yQ/r/oN_9WeGb6Mg.png');
+                    background-position: 0px 0px;
+                    background-size: auto;
+                    width: 36px;
+                    height: 36px;
+                    background-repeat: no-repeat;
+                    display: inline-block;
+                  "
+                ></i
+                >Messenger
+              </div>
+            </a>
+            <a href="">
+              <div>
+                <img
+                  draggable="false"
+                  height="36"
+                  width="36"
+                  class="xz74otr"
+                  alt=""
+                  referrerpolicy="origin-when-cross-origin"
+                  src="https://static.xx.fbcdn.net/rsrc.php/v4/yN/r/6Z9DShdc7zU.png"
+                />Messenger Kids
+              </div>
+            </a>
+            <a href="">
+              <div>
+                <img
+                  draggable="false"
+                  height="36"
+                  width="36"
+                  class="xz74otr"
+                  alt=""
+                  referrerpolicy="origin-when-cross-origin"
+                  src="https://static.xx.fbcdn.net/rsrc.php/v4/yv/r/GJ4EaivDaSj.png"
+                />Orders and payments
+              </div>
+            </a>
+            <a href="">
+              <div>
+                <i
+                  data-visualcompletion="css-img"
+                  class=""
+                  style="
+                    background-image: url('https://static.xx.fbcdn.net/rsrc.php/v4/yh/r/FlnJwE1zAUa.png');
+                    background-position: 0px -296px;
+                    background-size: auto;
+                    width: 36px;
+                    height: 36px;
+                    background-repeat: no-repeat;
+                    display: inline-block;
+                  "
+                ></i
+                >Pages
+              </div>
+            </a>
+            <a href="">
+              <div>
+                <i
+                  data-visualcompletion="css-img"
+                  class=""
+                  style="
+                    background-image: url('https://static.xx.fbcdn.net/rsrc.php/v4/yh/r/FlnJwE1zAUa.png');
+                    background-position: 0px -259px;
+                    background-size: auto;
+                    width: 36px;
+                    height: 36px;
+                    background-repeat: no-repeat;
+                    display: inline-block;
+                  "
+                ></i
+                >Play games
+              </div>
+            </a>
+            <a href="">
+              <div>
+                <img
+                  draggable="false"
+                  height="36"
+                  width="36"
+                  class="xz74otr"
+                  alt=""
+                  referrerpolicy="origin-when-cross-origin"
+                  src="https://static.xx.fbcdn.net/rsrc.php/v4/yv/r/x2_LFd7gCqg.png"
+                />Recent ad activity
+              </div>
+            </a>
+          </section>
+          <section>
+            <h1>Your Shortcuts</h1>
+          </section>
+        </div>
+        <div class="main-center">
+          <div class="card">
+            <!-- Header -->
+            <div class="card-header">
+              <img src="./profile-img.jpg" alt="profile" />
+              <div>
+                <div class="name">Imran Jovo</div>
+                <div class="time">
+                  Yesterday at 12:44 · 🎵 Open Your Eyes · Ilkan Gunuc
+                </div>
+              </div>
+            </div>
+
+            <!-- Hashtags -->
+            <div class="hashtags">
+              #imranjovo #technology #tech #viralvideo #trend #shorts #reels
+              #instapost
+            </div>
+
+            <!-- Image -->
+            <div class="card-content">
+              <img src="./profile-img.jpg" alt="Post Image" />
+            </div>
+
+            <!-- Footer -->
+            <div class="card-footer">
+              <span>👍 Like</span>
+              <span>💬 Comment</span>
+              <span>↗️ Share</span>
+            </div>
+          </div>  <div class="card">
+            <!-- Header -->
+            <div class="card-header">
+              <img src="./profile-img.jpg" alt="profile" />
+              <div>
+                <div class="name">Imran Jovo</div>
+                <div class="time">
+                  Yesterday at 12:44 · 🎵 Open Your Eyes · Ilkan Gunuc
+                </div>
+              </div>
+            </div>
+
+            <!-- Hashtags -->
+            <div class="hashtags">
+              #imranjovo #technology #tech #viralvideo #trend #shorts #reels
+              #instapost
+            </div>
+
+            <!-- Image -->
+            <div class="card-content">
+              <img src="./profile-img.jpg" alt="Post Image" />
+            </div>
+
+            <!-- Footer -->
+            <div class="card-footer">
+              <span>👍 Like</span>
+              <span>💬 Comment</span>
+              <span>↗️ Share</span>
+            </div>
+          </div>  <div class="card">
+            <!-- Header -->
+            <div class="card-header">
+              <img src="./profile-img.jpg" alt="profile" />
+              <div>
+                <div class="name">Imran Jovo</div>
+                <div class="time">
+                  Yesterday at 12:44 · 🎵 Open Your Eyes · Ilkan Gunuc
+                </div>
+              </div>
+            </div>
+
+            <!-- Hashtags -->
+            <div class="hashtags">
+              #imranjovo #technology #tech #viralvideo #trend #shorts #reels
+              #instapost
+            </div>
+
+            <!-- Image -->
+            <div class="card-content">
+              <img src="./profile-img.jpg" alt="Post Image" />
+            </div>
+
+            <!-- Footer -->
+            <div class="card-footer">
+              <span>👍 Like</span>
+              <span>💬 Comment</span>
+              <span>↗️ Share</span>
+            </div>
+          </div>
+        </div>
+        <div class="main-right"></div>
+      </main>
+    </div>
+  </body>
+</html>
