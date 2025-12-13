@@ -23,6 +23,7 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
   padding: 10px 10px;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -43,7 +44,7 @@ nav ul {
 .fb-logo {
   align-self: center;
   font-size: 40px;
-  color: #1877f2;
+  color: #0866FF;
 }
 
 nav abbr {
@@ -63,7 +64,7 @@ nav a {
   color: #757575;
 }
 .Search:focus-within {
-  box-shadow: 0 0 0 2px #1877f2;
+  box-shadow: 0 0 0 2px #0866FF;
 }
 .search input:focus {
   outline: none;
@@ -99,7 +100,7 @@ nav a {
   background-color: #e4e6eb;
 }
 .nav-center li:active {
-  border-bottom: 3px solid #1877f2;
+  border-bottom: 3px solid #0866FF;
   border-radius: 10px 10px 0 0;
 }
 .nav-center div:focus {
@@ -114,7 +115,7 @@ nav a {
   color: #757575;
 }
 .Home {
-  border-bottom: 3px solid rgb(24, 119, 242);
+  border-bottom: 3px solid #0866FF;
   border-radius: 0px;
 }
 .nav-right li {
@@ -191,8 +192,8 @@ scrollbar-width: none;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin: 0 5px;
-  padding: 8px;
+  /* margin: 0 0 0 5px ; */
+  padding: 8px 0 8px 8px;
   gap: 10px;
   width: 100%;
   cursor: pointer;
@@ -217,29 +218,18 @@ img {
 .main-center {
   width: 50%;
   height: 100vh;
+  position: absolute;
+  top: 60px;
+  left: 25%;
+  z-index: 0;
+  /* text-align: center;
+  margin-left: 25%; */
 }
 .main-right {
   width: 25%;
   height: 100vh;
 }
 
-/* HOVER EFFECT (FB STYLE) */
-
-/* PROFILE ITEM SPECIAL */
-/* .Profile {
-  font-weight: 600;
-}
-.Profile img {
-  border-radius: 50%;
-} */
-
-/* Section Title
-.main-left section h1 {
-  margin: 15px 10px;
-  font-size: 18px;
-  color: #65676b;
-  font-weight: 600;
-} */
 body {
   font-family: Arial, sans-serif;
   background: #ececec;
@@ -288,4 +278,49 @@ body {
   border-top: 1px solid #ddd;
   display: flex;
   justify-content: space-between;
+}
+.center-top {
+  width: 90%;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  margin-bottom: 20px;
+}
+.center-top img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.center-top input {
+  width: auto;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  background-color: #f0f2f5;
+  padding: 0 15px;
+  font-size: 14px;
+}
+.center-top input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #0866FF;
+}
+.center-top > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fa-video {
+  color: #f3425f;
+}
+.fa-photo-film{
+  color: #45bd62;
+}
+.fa-face-smile{
+  color: #f7b928;
+  align-self: flex-end;
 }
