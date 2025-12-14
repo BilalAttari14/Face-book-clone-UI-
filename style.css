@@ -288,7 +288,7 @@ img {
 .create-story {
   width: 115px;
   height: 200px;
-  background-image: url(./pics./profile-img.jpg);
+  background-image: url(./pics/profile-img.jpg);
   background-size: cover;
   background-position: center;
   border-radius: 10px;
