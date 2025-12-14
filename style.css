@@ -45,12 +45,34 @@ nav ul {
   align-self: center;
   font-size: 40px;
   color: #0866ff;
+  cursor: pointer;
 }
 
 nav abbr {
   text-decoration: none;
   cursor: pointer;
   position: relative;
+  visibility: none;
+}
+abbr::after {
+  content: attr(data-title);
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: visible;
+  transition: 0.25s ease;
+}
+abbr:hover::after {
+  opacity: 1;
+  visibility: visible;
 }
 nav a {
   outline: none;
@@ -85,38 +107,45 @@ nav a {
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
 }
-.nav-center li {
-  height: 50px;
+.nav-center div,
+.nav-center i {
+  height: 52px;
   width: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
-}
-.nav-center li:hover {
-  height: 50px;
-  width: 120px;
-  color: black;
-  background-color: #e4e6eb;
-}
-.nav-center li:active {
-  border-bottom: 3px solid #0866ff;
   border-radius: 10px 10px 0 0;
 }
-.nav-center div:focus {
-  color: black;
+.user {
+  border: 2px solid #757575;
+  border-radius: 50%;
+  stroke-width: 10;
+  stroke: #757575;
 }
 .nav-center div:hover {
-  color: black;
+  height: 52px;
+  width: 120px;
+  border-radius: 10px 10px 0 0;
+  background-color: #e4e6eb;
+}
+.nav-center div:active {
+  background-color: #d8dae0;
+  border-bottom: 3px solid #0866ff;
+  color: #0866ff;
+  border-radius: 10px 10px 0 0;
+}
+.user:active {
+  border-color: #0866ff;
+  stroke: #0866ff;
 }
 .nav-center div {
   font-size: 24px;
   font-weight: 500;
   color: #757575;
 }
-.Home {
+.Home div {
   border-bottom: 3px solid #0866ff;
-  border-radius: 0px;
+  border-radius: 10px 10px 0 0;
 }
 .nav-right li {
   width: 40px;
@@ -156,8 +185,8 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 25%;
-  height: 90vh;
+  width: 22%;
+  height: 93vh;
   position: fixed;
   left: 0px;
   top: 60px;
@@ -165,33 +194,39 @@ main {
   overflow-y: none;
   scrollbar-width: none;
 }
-
 .links-section {
-  margin: 0 10px;
+  width: 90%;
+}
+.main-left > .links-section div {
   width: 100%;
-  border-bottom: 1px solid #555555;
-}
-.links-section div:hover {
-  background: #e4e6e9;
-}
-h1{
-  font-size: 20px;
-  font-weight: 900;
-  margin: 15px 0;
-  padding-left: 20px;
-  color: #555;
-}
-.main-left div {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  /* margin: 0 0 0 5px ; */
+  margin: 0 0 0 5px;
   padding: 8px 0 8px 8px;
   gap: 10px;
   width: 100%;
   cursor: pointer;
   border-radius: 10px;
 }
+.links-section div:hover {
+  background: #e4e6e9;
+}
+.shortcut {
+  margin: 0 10px;
+  width: 75%;
+  border-top: 1px solid #555555;
+}
+.shortcut div {
+  margin: 10px 0 0 0;
+}
+.shortcut span {
+  font-size: 16px;
+  font-weight: 900;
+  margin: 10px 0;
+  color: #555;
+}
+
 .main-left i,
 img {
   margin-right: 12px;
@@ -209,19 +244,14 @@ img {
 }
 
 .main-center {
-  width: 50%;
+  width: 56%;
   height: 100vh;
   position: absolute;
   top: 60px;
-  left: 25%;
+  left: 22%;
   z-index: 0;
-  padding: 0 32px;
+  padding: 0 3%;
 }
-.main-right {
-  width: 25%;
-  height: 100vh;
-}
-
 .center-top {
   width: 100%;
   height: 60px;
@@ -281,9 +311,15 @@ img {
   font-size: 24px;
   color: #f7b928;
 }
-.stories{
+.stories {
   display: flex;
+  flex-direction: row;
   width: 100%;
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
+.stories ul {
+  display: flex;
 }
 .create-story {
   width: 115px;
@@ -333,10 +369,10 @@ img {
   font-weight: bold;
   color: #000;
 }
-.story{
+.story {
   width: 115px;
   height: 200px;
-  background-image: url(./pics./story1.jpg);
+  background-image: url(./pics/story1.jpg);
   background-size: cover;
   background-position: center;
   border-radius: 10px;
@@ -346,10 +382,10 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  margin-right: 10px; 
-  flex-grow:1 ;
+  margin-right: 10px;
+  flex-grow: 1;
 }
-.story img{
+.story img {
   height: 40px;
   width: 40px;
   border-radius: 50%;
@@ -358,7 +394,7 @@ img {
   top: 10px;
   left: 10px;
 }
-.story-name{
+.story-name {
   position: absolute;
   bottom: 10px;
   left: 10px;
@@ -367,14 +403,23 @@ img {
   font-size: 14px;
   text-shadow: 1px 1px 2px black;
 }
-.story-2{
-  background-image: url(./pics./story2.jpg);
+.story-2 {
+  background-image: url(./pics/story2.jpg);
+  background-repeat: no-repeat;
 }
-.story-3{
-  background-image: url(./pics./story3.jpg);
+.story-3 {
+  background-image: url(./pics/story3.jpg);
+  background-repeat: no-repeat;
 }
-.story-4{
-  background-image: url(./pics./story4.jpg);
+.story-4 {
+  background-image: url(./pics/story4.jpg);
+  background-repeat: no-repeat;
+}.story-5 {
+  background-image: url(./pics/story5.jfif);
+  background-repeat: no-repeat;
+}.story-6 {
+  background-image: url(./pics/story6.jfif);
+  background-repeat: no-repeat;
 }
 .card {
   width: 100%;
@@ -414,7 +459,8 @@ img {
   margin-left: 10px;
   cursor: pointer;
 }
-.card-content img , .card-content video{
+.card-content img,
+.card-content video {
   width: 100%;
   display: block;
   height: 70vh;
@@ -444,6 +490,62 @@ img {
 }
 .card-footer span {
   font-weight: 900;
+}
+.main-right {
+  width: 22%;
+  height: 95vh;
+  position: fixed;
+  top: 60px;
+  right: 0;
+  overflow: auto;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+.Contact {
+  width: 168px;
+  color: #65686c;
+  font-weight: 900;
+}
+.header-manu {
+  display: flex;
+}
+.header-manu div {
+  font-size: large;
+  color: #65686c;
+  width: 40px;
+}
+.chats {
+  padding: 20px 0;
+}
+.chats-contact {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+.contact-name {
+  height: 45px;
+  width: 45px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.contact-name img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+.contact-name span {
+  position: absolute;
+  bottom: 4px;
+  right: 6px;
+  background-color: #45bd62;
+  height: 12px;
+  width: 12px;
+  border: 2px solid white;
+  border-radius: 50%;
 }
 @media (max-width: 1100px) {
   .Search input {
